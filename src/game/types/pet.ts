@@ -10,6 +10,11 @@ export interface PetState {
   lifeStage: LifeStage
   alive: boolean
   lastUpdatedAt: number
+  stateCode: string
+  stateName: string
+  slangGreeting: string
+  vibe: string
+  favoriteFoods: string[]
 }
 
 export type PetAction = 'feed' | 'play' | 'sleep' | 'clean'

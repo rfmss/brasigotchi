@@ -8,8 +8,10 @@ import {
   applyTick,
   createInitialPet,
   getEvolutionProgress,
+  getFeedSuggestion,
   getNeedsAttention,
-  getPetCondition
+  getPetCondition,
+  getRegionalSpeech
 } from './game/core/rules'
 import type { PetState } from './game/types/pet'
 import { loadPet, savePet } from './services/storage'
@@ -32,14 +34,9 @@ function App() {
   const condition = getPetCondition(pet)
   const attention = getNeedsAttention(pet)
   const evolution = getEvolutionProgress(pet.ageTicks)
+  const feedSuggestion = getFeedSuggestion(pet)
 
-  const moodMessage = useMemo(() => {
-    if (!pet.alive) return 'Seu pet não resistiu. Reinicie para tentar novamente.'
-    if (condition === 'great') return 'Excelente! Todos os status estão altos.'
-    if (condition === 'danger') return 'Atenção: dois ou mais status estão em risco.'
-    if (condition === 'critical') return 'Crítico! Cuide do pet imediatamente.'
-    return 'Tudo sob controle, mas continue cuidando.'
-  }, [pet.alive, condition])
+  const moodMessage = useMemo(() => getRegionalSpeech(pet, condition), [pet, condition])
 
   const handleReset = () => setPet(createInitialPet())
 
@@ -64,7 +61,7 @@ function App() {
       </section>
 
       <div className="grid">
-        <PetAvatar lifeStage={pet.lifeStage} alive={pet.alive} />
+        <PetAvatar lifeStage={pet.lifeStage} alive={pet.alive} name={pet.name} stateName={pet.stateName} vibe={pet.vibe} />
         <StatusBars
           hunger={pet.hunger}
           energy={pet.energy}
@@ -72,11 +69,15 @@ function App() {
           mood={pet.mood}
           danger={attention}
         />
-        <ActionPanel disabled={!pet.alive} onAction={(action) => setPet((current) => applyAction(current, action))} />
+        <ActionPanel
+          disabled={!pet.alive}
+          feedLabel={feedSuggestion}
+          onAction={(action) => setPet((current) => applyAction(current, action))}
+        />
       </div>
 
       <button className="reset" onClick={handleReset}>
-        Reiniciar
+        Novo bichinho aleatório
       </button>
     </main>
   )

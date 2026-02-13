@@ -2,6 +2,15 @@
 
 MVP de Tamagotchi em React + TypeScript + Vite, com deploy no GitHub Pages.
 
+## Conceito atual
+
+Cada novo pet nasce como uma persona inspirada em um estado brasileiro:
+
+- identidade aleatória por estado (nome + vibe);
+- comidas típicas para alimentar;
+- falas com gírias regionais;
+- proposta educativa leve de geografia/cultura enquanto joga.
+
 ## Rodando localmente
 
 ```bash
@@ -17,17 +26,16 @@ npm run dev
 - `npm run lint`: lint
 - `npm run test`: testes (vitest)
 
-## Etapa 1.1 prática (concluída)
+## Etapa 1.2 prática (concluída)
 
-- Balanceamento inicial de risco (`DANGER_THRESHOLD`, `CRITICAL_THRESHOLD`).
-- Feedback de condição geral do pet (great / ok / danger / critical).
-- Destaque visual para status em risco.
-- Barra de progresso de evolução por fase.
-- Testes unitários expandidos para regras auxiliares.
+- Pet aleatório com persona de estado brasileiro.
+- Exibição de estado/vibe no avatar.
+- Alimentação com comidas típicas do estado.
+- Fala regional baseada na condição do pet.
 
 ## Próximas tarefas de execução (curto prazo)
 
-1. Adicionar eventos aleatórios (bom/humor ruim/doença leve).
-2. Criar log de eventos e histórico curto na UI.
-3. Ajustar curvas de dificuldade com base em playtest.
+1. Expandir para os 26 estados + DF.
+2. Adicionar mini-card educativo por estado (capital, região, curiosidade).
+3. Adicionar eventos culturais temáticos por estado.
 4. Preparar PWA (manifest e service worker).

@@ -2,17 +2,18 @@ import type { PetAction } from '../../game/types/pet'
 
 interface ActionPanelProps {
   disabled: boolean
+  feedLabel: string
   onAction: (action: PetAction) => void
 }
 
-const actions: Array<{ id: PetAction; label: string }> = [
-  { id: 'feed', label: '🍎 Alimentar' },
-  { id: 'play', label: '🎾 Brincar' },
-  { id: 'sleep', label: '🛌 Dormir' },
-  { id: 'clean', label: '🧽 Limpar' }
-]
+export default function ActionPanel({ disabled, feedLabel, onAction }: ActionPanelProps) {
+  const actions: Array<{ id: PetAction; label: string }> = [
+    { id: 'feed', label: `🍽️ Alimentar (${feedLabel})` },
+    { id: 'play', label: '🎾 Brincar' },
+    { id: 'sleep', label: '🛌 Dormir' },
+    { id: 'clean', label: '🧽 Limpar' }
+  ]
 
-export default function ActionPanel({ disabled, onAction }: ActionPanelProps) {
   return (
     <section className="card">
       <h2>Ações</h2>

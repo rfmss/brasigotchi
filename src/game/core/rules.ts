@@ -9,6 +9,7 @@ import {
   TICK_DECAY
 } from './constants'
 import type { PetAction, PetState } from '../types/pet'
+import { getRandomPersona, type StatePersona } from '../data/statePersonas'
 
 const clamp = (value: number) => Math.max(MIN_STAT, Math.min(MAX_STAT, value))
 
@@ -109,8 +110,24 @@ export const applyAction = (pet: PetState, action: PetAction): PetState => {
   return next
 }
 
-export const createInitialPet = (name = 'Brasigoto'): PetState => ({
-  name,
+export const getRegionalSpeech = (pet: PetState, condition: 'great' | 'ok' | 'danger' | 'critical') => {
+  if (!pet.alive) return `${pet.slangGreeting} Eita... preciso de mais cuidado da próxima vez!`
+  if (condition === 'great') return `${pet.slangGreeting} Tô feliz demais, visse?`
+  if (condition === 'danger') return `${pet.slangGreeting} Tô precisando de um trato aqui, viu!`
+  if (condition === 'critical') return `${pet.slangGreeting} Socorro! Tá puxado por aqui!`
+  return `${pet.slangGreeting} Bora continuar nessa jornada!`
+}
+
+export const getFeedSuggestion = (pet: PetState) => {
+  const index = pet.ageTicks % pet.favoriteFoods.length
+  return pet.favoriteFoods[index]
+}
+
+export const createInitialPet = (persona?: StatePersona): PetState => {
+  const selectedPersona = persona ?? getRandomPersona()
+
+  return ({
+  name: selectedPersona.mascotName,
   hunger: 75,
   energy: 75,
   hygiene: 75,
@@ -118,5 +135,11 @@ export const createInitialPet = (name = 'Brasigoto'): PetState => ({
   ageTicks: 0,
   lifeStage: 'baby',
   alive: true,
-  lastUpdatedAt: Date.now()
+  lastUpdatedAt: Date.now(),
+  stateCode: selectedPersona.id,
+  stateName: selectedPersona.stateName,
+  slangGreeting: selectedPersona.slangGreeting,
+  vibe: selectedPersona.vibe,
+  favoriteFoods: selectedPersona.favoriteFoods
 })
+}
