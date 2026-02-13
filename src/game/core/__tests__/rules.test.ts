@@ -1,3 +1,4 @@
+import { getStateShape } from '../../data/stateShapes'
 import { describe, expect, it } from 'vitest'
 import { applyAction, applyTick, createInitialPet, getEvolutionProgress, getPetCondition, getRegionalSpeech } from '../rules'
 
@@ -42,6 +43,11 @@ describe('game rules', () => {
     expect(pet.stateCode).toBe('MG')
     expect(pet.name).toBe('Mineirogotchi')
     expect(pet.favoriteFoods.length).toBeGreaterThan(0)
+  })
+
+
+  it('possui shape para estados cadastrados', () => {
+    expect(getStateShape('SP')).toBeDefined()
   })
 
   it('gera fala regional baseada na condição', () => {

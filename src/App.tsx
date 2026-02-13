@@ -61,7 +61,14 @@ function App() {
       </section>
 
       <div className="grid">
-        <PetAvatar lifeStage={pet.lifeStage} alive={pet.alive} name={pet.name} stateName={pet.stateName} vibe={pet.vibe} />
+        <PetAvatar
+          lifeStage={pet.lifeStage}
+          alive={pet.alive}
+          name={pet.name}
+          stateName={pet.stateName}
+          stateCode={pet.stateCode}
+          vibe={pet.vibe}
+        />
         <StatusBars
           hunger={pet.hunger}
           energy={pet.energy}

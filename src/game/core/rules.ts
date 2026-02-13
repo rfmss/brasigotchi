@@ -8,8 +8,8 @@ import {
   MIN_STAT,
   TICK_DECAY
 } from './constants'
-import type { PetAction, PetState } from '../types/pet'
 import { getRandomPersona, type StatePersona } from '../data/statePersonas'
+import type { PetAction, PetState } from '../types/pet'
 
 const clamp = (value: number) => Math.max(MIN_STAT, Math.min(MAX_STAT, value))
 
@@ -25,14 +25,12 @@ const evaluateAlive = (pet: PetState) => {
   return criticalCount < 2
 }
 
-export const getNeedsAttention = (pet: PetState) => {
-  return {
-    hunger: pet.hunger <= DANGER_THRESHOLD,
-    energy: pet.energy <= DANGER_THRESHOLD,
-    hygiene: pet.hygiene <= DANGER_THRESHOLD,
-    mood: pet.mood <= DANGER_THRESHOLD
-  }
-}
+export const getNeedsAttention = (pet: PetState) => ({
+  hunger: pet.hunger <= DANGER_THRESHOLD,
+  energy: pet.energy <= DANGER_THRESHOLD,
+  hygiene: pet.hygiene <= DANGER_THRESHOLD,
+  mood: pet.mood <= DANGER_THRESHOLD
+})
 
 export const getPetCondition = (pet: PetState): 'great' | 'ok' | 'danger' | 'critical' => {
   const values = [pet.hunger, pet.energy, pet.hygiene, pet.mood]
@@ -126,20 +124,20 @@ export const getFeedSuggestion = (pet: PetState) => {
 export const createInitialPet = (persona?: StatePersona): PetState => {
   const selectedPersona = persona ?? getRandomPersona()
 
-  return ({
-  name: selectedPersona.mascotName,
-  hunger: 75,
-  energy: 75,
-  hygiene: 75,
-  mood: 75,
-  ageTicks: 0,
-  lifeStage: 'baby',
-  alive: true,
-  lastUpdatedAt: Date.now(),
-  stateCode: selectedPersona.id,
-  stateName: selectedPersona.stateName,
-  slangGreeting: selectedPersona.slangGreeting,
-  vibe: selectedPersona.vibe,
-  favoriteFoods: selectedPersona.favoriteFoods
-})
+  return {
+    name: selectedPersona.mascotName,
+    hunger: 75,
+    energy: 75,
+    hygiene: 75,
+    mood: 75,
+    ageTicks: 0,
+    lifeStage: 'baby',
+    alive: true,
+    lastUpdatedAt: Date.now(),
+    stateCode: selectedPersona.id,
+    stateName: selectedPersona.stateName,
+    slangGreeting: selectedPersona.slangGreeting,
+    vibe: selectedPersona.vibe,
+    favoriteFoods: selectedPersona.favoriteFoods
+  }
 }
