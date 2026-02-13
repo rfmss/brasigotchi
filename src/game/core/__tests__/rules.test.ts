@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { applyAction, applyTick, createInitialPet } from '../rules'
+import { applyAction, applyTick, createInitialPet, getEvolutionProgress, getPetCondition } from '../rules'
 
 describe('game rules', () => {
   it('reduz status com tick', () => {
@@ -16,5 +16,16 @@ describe('game rules', () => {
     const next = applyAction(pet, 'feed')
 
     expect(next.hunger).toBeGreaterThanOrEqual(pet.hunger)
+  })
+
+  it('calcula condição great quando todos os status são altos', () => {
+    const pet = createInitialPet()
+    expect(getPetCondition(pet)).toBe('great')
+  })
+
+  it('calcula progresso de evolução por fase', () => {
+    const progress = getEvolutionProgress(18)
+    expect(progress.current).toBe('Criança')
+    expect(progress.next).toBe('Adolescente')
   })
 })

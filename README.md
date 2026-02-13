@@ -17,9 +17,17 @@ npm run dev
 - `npm run lint`: lint
 - `npm run test`: testes (vitest)
 
-## Etapa 1 concluída
+## Etapa 1.1 prática (concluída)
 
-- Setup do projeto frontend.
-- Engine básica de jogo (tick + ações).
-- Persistência local em `localStorage`.
-- Workflow de deploy no GitHub Pages.
+- Balanceamento inicial de risco (`DANGER_THRESHOLD`, `CRITICAL_THRESHOLD`).
+- Feedback de condição geral do pet (great / ok / danger / critical).
+- Destaque visual para status em risco.
+- Barra de progresso de evolução por fase.
+- Testes unitários expandidos para regras auxiliares.
+
+## Próximas tarefas de execução (curto prazo)
+
+1. Adicionar eventos aleatórios (bom/humor ruim/doença leve).
+2. Criar log de eventos e histórico curto na UI.
+3. Ajustar curvas de dificuldade com base em playtest.
+4. Preparar PWA (manifest e service worker).

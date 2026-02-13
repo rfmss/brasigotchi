@@ -31,12 +31,44 @@ body {
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
+.message {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin: 0 0 1rem;
+}
+
+.message-great {
+  background: #dcfce7;
+}
+
+.message-ok {
+  background: #dbeafe;
+}
+
+.message-danger {
+  background: #fef3c7;
+}
+
+.message-critical {
+  background: #fee2e2;
+}
+
+.evolution progress {
+  width: 100%;
+}
+
 .status-row {
   display: grid;
   grid-template-columns: 72px 1fr 40px;
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 8px;
+}
+
+.status-danger {
+  background: #fee2e2;
 }
 
 .actions-grid {

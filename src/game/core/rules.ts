@@ -1,4 +1,13 @@
-import { ACTION_EFFECTS, EVOLUTION_TICKS, MAX_STAT, MIN_STAT, TICK_DECAY } from './constants'
+import {
+  ACTION_EFFECTS,
+  CRITICAL_THRESHOLD,
+  DANGER_THRESHOLD,
+  EVOLUTION_LABELS,
+  EVOLUTION_TICKS,
+  MAX_STAT,
+  MIN_STAT,
+  TICK_DECAY
+} from './constants'
 import type { PetAction, PetState } from '../types/pet'
 
 const clamp = (value: number) => Math.max(MIN_STAT, Math.min(MAX_STAT, value))
@@ -13,6 +22,58 @@ const computeLifeStage = (ageTicks: number): PetState['lifeStage'] => {
 const evaluateAlive = (pet: PetState) => {
   const criticalCount = [pet.hunger, pet.energy, pet.hygiene, pet.mood].filter((v) => v <= 0).length
   return criticalCount < 2
+}
+
+export const getNeedsAttention = (pet: PetState) => {
+  return {
+    hunger: pet.hunger <= DANGER_THRESHOLD,
+    energy: pet.energy <= DANGER_THRESHOLD,
+    hygiene: pet.hygiene <= DANGER_THRESHOLD,
+    mood: pet.mood <= DANGER_THRESHOLD
+  }
+}
+
+export const getPetCondition = (pet: PetState): 'great' | 'ok' | 'danger' | 'critical' => {
+  const values = [pet.hunger, pet.energy, pet.hygiene, pet.mood]
+  const criticalCount = values.filter((v) => v <= CRITICAL_THRESHOLD).length
+  const dangerCount = values.filter((v) => v <= DANGER_THRESHOLD).length
+
+  if (criticalCount >= 2) return 'critical'
+  if (dangerCount >= 2) return 'danger'
+  if (values.every((v) => v >= 70)) return 'great'
+  return 'ok'
+}
+
+export const getEvolutionProgress = (ageTicks: number) => {
+  if (ageTicks < EVOLUTION_TICKS.child) {
+    return {
+      current: EVOLUTION_LABELS.baby,
+      next: EVOLUTION_LABELS.child,
+      progress: Math.round((ageTicks / EVOLUTION_TICKS.child) * 100)
+    }
+  }
+
+  if (ageTicks < EVOLUTION_TICKS.teen) {
+    return {
+      current: EVOLUTION_LABELS.child,
+      next: EVOLUTION_LABELS.teen,
+      progress: Math.round(((ageTicks - EVOLUTION_TICKS.child) / (EVOLUTION_TICKS.teen - EVOLUTION_TICKS.child)) * 100)
+    }
+  }
+
+  if (ageTicks < EVOLUTION_TICKS.adult) {
+    return {
+      current: EVOLUTION_LABELS.teen,
+      next: EVOLUTION_LABELS.adult,
+      progress: Math.round(((ageTicks - EVOLUTION_TICKS.teen) / (EVOLUTION_TICKS.adult - EVOLUTION_TICKS.teen)) * 100)
+    }
+  }
+
+  return {
+    current: EVOLUTION_LABELS.adult,
+    next: null,
+    progress: 100
+  }
 }
 
 export const applyTick = (pet: PetState): PetState => {

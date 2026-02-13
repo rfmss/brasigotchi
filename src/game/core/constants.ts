@@ -1,6 +1,8 @@
 export const MAX_STAT = 100
 export const MIN_STAT = 0
 export const TICK_INTERVAL_MS = 5000
+export const DANGER_THRESHOLD = 25
+export const CRITICAL_THRESHOLD = 10
 
 export const TICK_DECAY = {
   hunger: 4,
@@ -21,3 +23,10 @@ export const EVOLUTION_TICKS = {
   teen: 24,
   adult: 36
 }
+
+export const EVOLUTION_LABELS = {
+  baby: 'Bebê',
+  child: 'Criança',
+  teen: 'Adolescente',
+  adult: 'Adulto'
+} as const

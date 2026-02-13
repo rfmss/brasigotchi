@@ -3,9 +3,15 @@ interface StatusBarsProps {
   energy: number
   hygiene: number
   mood: number
+  danger: {
+    hunger: boolean
+    energy: boolean
+    hygiene: boolean
+    mood: boolean
+  }
 }
 
-const rows: Array<{ key: keyof StatusBarsProps; label: string }> = [
+const rows: Array<{ key: keyof Pick<StatusBarsProps, 'hunger' | 'energy' | 'hygiene' | 'mood'>; label: string }> = [
   { key: 'hunger', label: 'Fome' },
   { key: 'energy', label: 'Energia' },
   { key: 'hygiene', label: 'Higiene' },
@@ -19,7 +25,7 @@ export default function StatusBars(props: StatusBarsProps) {
       {rows.map(({ key, label }) => {
         const value = props[key]
         return (
-          <div className="status-row" key={key}>
+          <div className={`status-row ${props.danger[key] ? 'status-danger' : ''}`} key={key}>
             <span>{label}</span>
             <progress max={100} value={value} />
             <strong>{value}</strong>
