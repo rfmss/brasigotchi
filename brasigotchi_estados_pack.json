@@ -1,0 +1,677 @@
+[
+  {
+    "uf": "AC",
+    "nome": "Acre",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-AC.svg",
+    "comidas": [
+      "tacacá acreano",
+      "baixaria (variação local)",
+      "pato no tucupi",
+      "pirarucu de casaca",
+      "mingau de banana",
+      "caldeirada de peixe"
+    ],
+    "girias": [
+      "égua!",
+      "visse?",
+      "mana/manaia",
+      "bora simbora",
+      "arretado",
+      "pai d'égua"
+    ],
+    "regras": [
+      "usa interjeições curtas",
+      "finaliza perguntas com 'visse?'"
+    ]
+  },
+  {
+    "uf": "AL",
+    "nome": "Alagoas",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-AL.svg",
+    "comidas": [
+      "sururu",
+      "chiclete de camarão",
+      "caldo de sururu",
+      "biscoito de goma",
+      "tapioca recheada",
+      "peixada alagoana"
+    ],
+    "girias": [
+      "oxe",
+      "visse",
+      "cabra",
+      "massa",
+      "arretado",
+      "meu rei/minha rainha"
+    ],
+    "regras": [
+      "tom amistoso e caloroso",
+      "puxa vogais em surpresa (oxeee)"
+    ]
+  },
+  {
+    "uf": "AP",
+    "nome": "Amapá",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-AP.svg",
+    "comidas": [
+      "camarão no bafo",
+      "filhote na brasa",
+      "tacacá",
+      "açaí com peixe",
+      "vatapá paraense (influência)",
+      "cuscuz de arroz"
+    ],
+    "girias": [
+      "égua",
+      "visse",
+      "mano",
+      "bora",
+      "pai d'égua",
+      "tu é doido"
+    ],
+    "regras": [
+      "muito 'tu' e 'visse'",
+      "interjeições fortes ('égua!')"
+    ]
+  },
+  {
+    "uf": "AM",
+    "nome": "Amazonas",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-AM.svg",
+    "comidas": [
+      "tacacá",
+      "tambaqui assado",
+      "pirarucu de casaca",
+      "caldeirada de tucunaré",
+      "x-caboquinho",
+      "bolo de macaxeira"
+    ],
+    "girias": [
+      "mano",
+      "bora",
+      "égua",
+      "visse",
+      "tu é doido",
+      "pior que é"
+    ],
+    "regras": [
+      "usa 'tu' com frequência",
+      "fala direta e descontraída"
+    ]
+  },
+  {
+    "uf": "BA",
+    "nome": "Bahia",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-BA.svg",
+    "comidas": [
+      "acarajé",
+      "vatapá",
+      "moqueca baiana",
+      "caruru",
+      "bobó de camarão",
+      "abará"
+    ],
+    "girias": [
+      "oxente",
+      "meu rei",
+      "retado",
+      "massa",
+      "vixe",
+      "bora"
+    ],
+    "regras": [
+      "chama com carinho ('meu rei/minha linda')",
+      "ritmo cantado"
+    ]
+  },
+  {
+    "uf": "CE",
+    "nome": "Ceará",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-CE.svg",
+    "comidas": [
+      "baião de dois",
+      "carne de sol com macaxeira",
+      "panelada",
+      "buchada",
+      "tapioca",
+      "cuscuz nordestino"
+    ],
+    "girias": [
+      "oxe",
+      "vixe",
+      "visse",
+      "arretado",
+      "cabra",
+      "égua"
+    ],
+    "regras": [
+      "puxa o 'i' em 'visse'",
+      "interjeições rápidas"
+    ]
+  },
+  {
+    "uf": "DF",
+    "nome": "Distrito Federal",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20Distrito%20Federal%20location%20map.svg",
+    "comidas": [
+      "pamonha",
+      "empadão goiano (influência)",
+      "pequi (influência)",
+      "galinhada",
+      "pastel de feira",
+      "hambúrguer artesanal (vida urbana)"
+    ],
+    "girias": [
+      "véi",
+      "mano",
+      "de boas",
+      "top",
+      "massa",
+      "tô ligado"
+    ],
+    "regras": [
+      "fala urbana e mista",
+      "usa 'véi' como vocativo"
+    ]
+  },
+  {
+    "uf": "ES",
+    "nome": "Espírito Santo",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-ES.svg",
+    "comidas": [
+      "moqueca capixaba",
+      "torta capixaba",
+      "bobó de camarão (var.)",
+      "caranguejada",
+      "polenta com frango",
+      "pão de queijo (influência)"
+    ],
+    "girias": [
+      "capixaba",
+      "maneiro",
+      "trem",
+      "uai (influência)",
+      "pô",
+      "sussa"
+    ],
+    "regras": [
+      "tom calmo",
+      "mistura interior + litoral"
+    ]
+  },
+  {
+    "uf": "GO",
+    "nome": "Goiás",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-GO.svg",
+    "comidas": [
+      "empadão goiano",
+      "pequi (arroz com pequi)",
+      "galinhada",
+      "pamonha",
+      "curau",
+      "jantinha (espetinho com arroz)"
+    ],
+    "girias": [
+      "uai",
+      "sô",
+      "trem",
+      "bão",
+      "cê tá doido",
+      "dimais"
+    ],
+    "regras": [
+      "contrai 'você'→'cê'",
+      "usa 'trem' pra tudo"
+    ]
+  },
+  {
+    "uf": "MA",
+    "nome": "Maranhão",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-MA.svg",
+    "comidas": [
+      "arroz de cuxá",
+      "torta de camarão",
+      "peixada maranhense",
+      "juçara",
+      "caruru",
+      "carne de sol com arroz"
+    ],
+    "girias": [
+      "visse",
+      "égua",
+      "rapá",
+      "oxente",
+      "bora",
+      "meu patrão"
+    ],
+    "regras": [
+      "fala acelerada",
+      "usa 'rapá' no fim de frase"
+    ]
+  },
+  {
+    "uf": "MT",
+    "nome": "Mato Grosso",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-MT.svg",
+    "comidas": [
+      "maria-isabel",
+      "farofa de banana",
+      "mojica de pintado",
+      "arroz com pequi",
+      "pacú assado",
+      "chipa (influência)"
+    ],
+    "girias": [
+      "piá (influência)",
+      "tchapa e cruz",
+      "sô",
+      "uai",
+      "bora",
+      "trem"
+    ],
+    "regras": [
+      "mistura centro-oeste + sul",
+      "fala tranquila"
+    ]
+  },
+  {
+    "uf": "MS",
+    "nome": "Mato Grosso do Sul",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-MS.svg",
+    "comidas": [
+      "sopa paraguaia",
+      "chipa",
+      "sobá (Campo Grande)",
+      "carne de jacaré (regional)",
+      "arroz carreteiro",
+      "tereré"
+    ],
+    "girias": [
+      "piá",
+      "guri",
+      "tchê (influência)",
+      "bora",
+      "mano",
+      "sussa"
+    ],
+    "regras": [
+      "mistura fronteira + sul",
+      "menciona 'tereré' como ritual"
+    ]
+  },
+  {
+    "uf": "MG",
+    "nome": "Minas Gerais",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-MG.svg",
+    "comidas": [
+      "pão de queijo",
+      "feijão tropeiro",
+      "frango com quiabo",
+      "tutu de feijão",
+      "doce de leite",
+      "torresmo"
+    ],
+    "girias": [
+      "uai",
+      "sô",
+      "ah nem",
+      "véi",
+      "trem",
+      "bão demais"
+    ],
+    "regras": [
+      "usa 'trem' como substantivo genérico",
+      "perguntas com 'uai?'"
+    ]
+  },
+  {
+    "uf": "PA",
+    "nome": "Pará",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-PA.svg",
+    "comidas": [
+      "tacacá",
+      "pato no tucupi",
+      "maniçoba",
+      "açaí com peixe",
+      "vatapá paraense",
+      "caruru paraense"
+    ],
+    "girias": [
+      "égua",
+      "visse",
+      "mano",
+      "pai d'égua",
+      "bora",
+      "tu é doido"
+    ],
+    "regras": [
+      "muito 'tu'",
+      "entonação forte"
+    ]
+  },
+  {
+    "uf": "PB",
+    "nome": "Paraíba",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-PB.svg",
+    "comidas": [
+      "rubacão",
+      "carne de sol",
+      "tapioca",
+      "cuscuz",
+      "baião de dois",
+      "bolo de rolo (influência)"
+    ],
+    "girias": [
+      "oxente",
+      "visse",
+      "arretado",
+      "cabra",
+      "vixe",
+      "bora"
+    ],
+    "regras": [
+      "fala acolhedora",
+      "usa 'oxente' como surpresa"
+    ]
+  },
+  {
+    "uf": "PR",
+    "nome": "Paraná",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-PR.svg",
+    "comidas": [
+      "barreado",
+      "carne de onça",
+      "pierogi (influência)",
+      "pinhão",
+      "entrevero",
+      "café com broa"
+    ],
+    "girias": [
+      "piá",
+      "guria",
+      "capaz",
+      "bah (influência)",
+      "daí?",
+      "vish"
+    ],
+    "regras": [
+      "usa 'piá/guria'",
+      "perguntas com 'daí?'"
+    ]
+  },
+  {
+    "uf": "PE",
+    "nome": "Pernambuco",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-PE.svg",
+    "comidas": [
+      "bolo de rolo",
+      "caldinho de feijão",
+      "sarapatel",
+      "buchada",
+      "tapioca",
+      "carne de sol com macaxeira"
+    ],
+    "girias": [
+      "oxente",
+      "visse",
+      "massa",
+      "arretado",
+      "meu fi",
+      "vixe"
+    ],
+    "regras": [
+      "chama de 'meu fi'",
+      "fala rápida"
+    ]
+  },
+  {
+    "uf": "PI",
+    "nome": "Piauí",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-PI.svg",
+    "comidas": [
+      "paçoca de carne de sol",
+      "maria-isabel",
+      "cajuína",
+      "capote (galinha d'angola)",
+      "baião de dois",
+      "carneiro guisado"
+    ],
+    "girias": [
+      "oxente",
+      "visse",
+      "rapaz",
+      "vixe",
+      "arretado",
+      "bora"
+    ],
+    "regras": [
+      "usa 'rapaz' como vocativo",
+      "tom direto"
+    ]
+  },
+  {
+    "uf": "RJ",
+    "nome": "Rio de Janeiro",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-RJ.svg",
+    "comidas": [
+      "feijoada",
+      "biscoito Globo",
+      "mate gelado",
+      "filé à Oswaldo Aranha",
+      "bolinho de bacalhau",
+      "sanduíche de pernil"
+    ],
+    "girias": [
+      "cara",
+      "mermão",
+      "bolado",
+      "maneiro",
+      "sinistro",
+      "partiu"
+    ],
+    "regras": [
+      "vocativo 'cara/mermão'",
+      "gírias curtas e urbanas"
+    ]
+  },
+  {
+    "uf": "RN",
+    "nome": "Rio Grande do Norte",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-RN.svg",
+    "comidas": [
+      "galo de capoeira",
+      "carne de sol com macaxeira",
+      "tapioca",
+      "cuscuz",
+      "ginga com tapioca",
+      "baião de dois"
+    ],
+    "girias": [
+      "oxente",
+      "visse",
+      "arretado",
+      "meu fi",
+      "vixe",
+      "bora"
+    ],
+    "regras": [
+      "tom bem humorado",
+      "usa 'meu fi'"
+    ]
+  },
+  {
+    "uf": "RO",
+    "nome": "Rondônia",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-RO.svg",
+    "comidas": [
+      "tambaqui assado",
+      "caldeirada de peixe",
+      "churrasco de tambaqui",
+      "farofa de banana",
+      "pirarucu",
+      "bolo de macaxeira"
+    ],
+    "girias": [
+      "mano",
+      "bora",
+      "visse",
+      "égua",
+      "tô ligado",
+      "sussa"
+    ],
+    "regras": [
+      "fala simples",
+      "interjeições amazônicas"
+    ]
+  },
+  {
+    "uf": "RR",
+    "nome": "Roraima",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-RR.svg",
+    "comidas": [
+      "damurida",
+      "paçoca de carne",
+      "caldeirada de peixe",
+      "tacacá",
+      "pirarucu",
+      "beiju"
+    ],
+    "girias": [
+      "mano",
+      "bora",
+      "visse",
+      "tu é doido",
+      "égua",
+      "de boas"
+    ],
+    "regras": [
+      "muito 'tu'",
+      "tom amigável"
+    ]
+  },
+  {
+    "uf": "RS",
+    "nome": "Rio Grande do Sul",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-RS.svg",
+    "comidas": [
+      "churrasco",
+      "arroz carreteiro",
+      "chimarrão",
+      "cuca",
+      "sagu",
+      "entrevero"
+    ],
+    "girias": [
+      "tchê",
+      "bah",
+      "capaz",
+      "guri/guria",
+      "tri",
+      "barbaridade"
+    ],
+    "regras": [
+      "usa 'tchê' no começo",
+      "intensifica com 'tri'"
+    ]
+  },
+  {
+    "uf": "SC",
+    "nome": "Santa Catarina",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-SC.svg",
+    "comidas": [
+      "sequência de camarão",
+      "marreco com repolho roxo",
+      "cuca",
+      "pirão",
+      "ostr as (litoral)",
+      "entrevero"
+    ],
+    "girias": [
+      "manezinho",
+      "tchô",
+      "bah",
+      "capaz",
+      "guri",
+      "massa"
+    ],
+    "regras": [
+      "tom brincalhão",
+      "usa 'tchô' como chamado"
+    ]
+  },
+  {
+    "uf": "SE",
+    "nome": "Sergipe",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-SE.svg",
+    "comidas": [
+      "caranguejada",
+      "moqueca sergipana",
+      "arroz de hauçá",
+      "tapioca",
+      "mangaba (doces/suco)",
+      "pirão de leite"
+    ],
+    "girias": [
+      "oxente",
+      "visse",
+      "massa",
+      "arretado",
+      "meu rei",
+      "vixe"
+    ],
+    "regras": [
+      "tom acolhedor",
+      "usa 'meu rei'"
+    ]
+  },
+  {
+    "uf": "SP",
+    "nome": "São Paulo",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-SP.svg",
+    "comidas": [
+      "pizza paulistana",
+      "mortadela do Mercadão",
+      "virado à paulista",
+      "cuscuz paulista",
+      "bauru",
+      "pão na chapa com pingado"
+    ],
+    "girias": [
+      "mano",
+      "meu",
+      "tipo",
+      "véi",
+      "da hora",
+      "tô ligado"
+    ],
+    "regras": [
+      "fala rápida",
+      "enche de 'tipo' (com moderação)"
+    ]
+  },
+  {
+    "uf": "TO",
+    "nome": "Tocantins",
+    "map_svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20map%2C%20BR-TO.svg",
+    "comidas": [
+      "chambari",
+      "arroz com pequi",
+      "torta de banana",
+      "peixe na telha",
+      "paçoca de carne",
+      "pamonha"
+    ],
+    "girias": [
+      "uai",
+      "sô",
+      "trem",
+      "bora",
+      "dimais",
+      "cê tá doido"
+    ],
+    "regras": [
+      "mistura norte + centro-oeste",
+      "usa 'uai'"
+    ]
+  }
+]
