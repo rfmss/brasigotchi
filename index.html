@@ -17,11 +17,7 @@
             --text-muted: #aaa;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Fredoka', sans-serif;
@@ -47,11 +43,7 @@
             text-align: center;
         }
 
-        .subtitle {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            text-align: center;
-        }
+        .subtitle { color: var(--text-muted); margin-bottom: 30px; text-align: center; }
 
         .game-container {
             display: flex;
@@ -73,76 +65,20 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
-        .brasigotchi-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(46, 204, 113, 0.1), transparent);
-            animation: rotate 10s linear infinite;
-        }
+        .state-info { text-align: center; }
+        .state-name { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+        .state-uf { font-size: 1.2rem; color: var(--text-muted); }
 
-        @keyframes rotate {
-            to { transform: rotate(360deg); }
-        }
+        .brasigotchi-svg { width: 200px; height: 200px; }
 
-        .state-info {
-            text-align: center;
-            z-index: 1;
-        }
-
-        .state-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .state-uf {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-        }
-
-        .brasigotchi-svg {
-            width: 200px;
-            height: 200px;
-            z-index: 1;
-        }
-
-        .stats {
-            display: flex;
-            gap: 20px;
-            z-index: 1;
-        }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .stat-icon {
-            font-size: 1.5rem;
-        }
-
-        .stat-bar {
-            width: 60px;
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .stat-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-
+        .stats { display: flex; gap: 20px; }
+        .stat { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+        .stat-icon { font-size: 1.5rem; }
+        .stat-bar { width: 60px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+        .stat-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
         .stat-fill.hunger { background: var(--secondary); }
         .stat-fill.happiness { background: var(--accent); }
         .stat-fill.energy { background: var(--primary); }
@@ -156,18 +92,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            z-index: 1;
             font-size: 1.1rem;
             max-width: 300px;
         }
 
-        .controls {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            z-index: 1;
-        }
+        .controls { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
 
         .btn {
             padding: 12px 24px;
@@ -183,52 +112,16 @@
             gap: 8px;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn-feed {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .btn-feed:hover {
-            background: #c0392b;
-            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
-        }
-
-        .btn-play {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-play:hover {
-            background: #d68910;
-            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
-        }
-
-        .btn-sleep {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-sleep:hover {
-            background: var(--primary-dark);
-            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.4);
-        }
-
-        .btn-new {
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-            color: white;
-        }
-
-        .btn-new:hover {
-            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.4);
-        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn:active { transform: translateY(0); }
+        .btn-feed { background: var(--secondary); color: white; }
+        .btn-feed:hover { background: #c0392b; box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4); }
+        .btn-play { background: var(--accent); color: white; }
+        .btn-play:hover { background: #d68910; box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4); }
+        .btn-sleep { background: var(--primary); color: white; }
+        .btn-sleep:hover { background: var(--primary-dark); box-shadow: 0 5px 20px rgba(46, 204, 113, 0.4); }
+        .btn-new { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; }
+        .btn-new:hover { box-shadow: 0 5px 20px rgba(155, 89, 182, 0.4); }
 
         .food-menu {
             position: absolute;
@@ -247,15 +140,8 @@
             overflow-y: auto;
         }
 
-        .food-menu.show {
-            display: flex;
-        }
-
-        .food-menu h3 {
-            text-align: center;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
+        .food-menu.show { display: flex; }
+        .food-menu h3 { text-align: center; margin-bottom: 10px; color: var(--accent); }
 
         .food-item {
             padding: 10px 20px;
@@ -270,9 +156,7 @@
             text-align: left;
         }
 
-        .food-item:hover {
-            background: rgba(231, 76, 60, 0.3);
-        }
+        .food-item:hover { background: rgba(231, 76, 60, 0.3); }
 
         .overlay {
             position: fixed;
@@ -285,287 +169,73 @@
             display: none;
         }
 
-        .overlay.show {
-            display: block;
-        }
+        .overlay.show { display: block; }
 
-        .no-brasigotchi {
-            text-align: center;
-            padding: 40px;
-        }
+        .no-brasigotchi { text-align: center; padding: 40px; }
+        .no-brasigotchi h2 { font-size: 1.5rem; margin-bottom: 20px; color: var(--accent); }
+        .no-brasigotchi p { color: var(--text-muted); margin-bottom: 30px; }
 
-        .no-brasigotchi h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
+        .age { font-size: 0.9rem; color: var(--text-muted); }
+        .age span { color: var(--primary); font-weight: 600; }
 
-        .no-brasigotchi p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
+        @keyframes sleep { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .sleeping { animation: sleep 2s ease infinite; }
 
-        .age {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            z-index: 1;
-        }
-
-        .age span {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .animate-bounce {
-            animation: bounce 0.5s ease;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: rotate(0); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
-        }
-
-        .animate-shake {
-            animation: shake 0.5s ease;
-        }
-
-        @keyframes sleep {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .sleeping {
-            animation: sleep 2s ease infinite;
-        }
-
-        .footer {
-            margin-top: 40px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            text-align: center;
-        }
+        .footer { margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; text-align: center; }
     </style>
 </head>
 <body>
     <h1>🇧🇷 Brasigotchi</h1>
     <p class="subtitle">Seu Tamagotchi Brasileiro</p>
 
-    <div class="game-container" id="gameContainer">
-        <!-- Game content will be rendered here -->
-    </div>
+    <div class="game-container" id="gameContainer"></div>
 
     <p class="footer">Crie seu Brasigotchi e divirta-se!</p>
 
+    <div class="overlay" id="overlay"></div>
+    <div class="food-menu" id="foodMenu">
+        <h3>Escolha a comida 🍽️</h3>
+        <div id="foodItems"></div>
+    </div>
+
     <script>
-        // Data for all 27 Brazilian states
         const statesData = {
-            AC: {
-                name: "Acre",
-                color: "#8B4513",
-                foods: ["Tacacá", "Pirarucu assado", "Farofa d'água", "Açaí"],
-                vocabulary: ["Eita!", "Vôte!", "Rapadura", "Maneiro!"],
-                svg: `<path d="M60,40 L140,40 L150,60 L160,80 L150,100 L140,120 L120,140 L100,160 L80,160 L60,140 L50,120 L50,100 L50,80 L50,60 Z" fill="#8B4513" stroke="#5D2E0C" stroke-width="3"/>`
-            },
-            AL: {
-                name: "Alagoas",
-                color: "#E74C3C",
-                foods: ["Sururu de腹腔", "Macaxeira", "Buchada de bode", "Camarão regional"],
-                vocabulary: ["Vixi!", "Oxente!", "Nego", "Eita, meu!"],
-                svg: `<path d="M80,50 L140,50 L160,70 L160,90 L150,110 L130,130 L110,150 L90,150 L70,130 L60,110 L60,90 L60,70 Z" fill="#E74C3C" stroke="#C0392B" stroke-width="3"/>`
-            },
-            AM: {
-                name: "Amazonas",
-                color: "#228B22",
-                foods: ["Tucunaré", "Jaraqui frito", "Caldeirada de peixe", "Boi na brasa"],
-                vocabulary: ["Eita!", "Rapaz!", "Maneiro", "Vixe Maria!"],
-                svg: `<ellipse cx="105" cy="105" rx="70" ry="70" fill="#228B22" stroke="#1B6B1B" stroke-width="3"/>`
-            },
-            AP: {
-                name: "Amapá",
-                color: "#FF6B6B",
-                foods: ["Peixe açougue", "Tacacá", "Guariúba", "Açaí"],
-                vocabulary: ["Vixe!", "Nego", "Eita!", "Ui!"],
-                svg: `<path d="M50,80 L160,80 L170,120 L150,150 L100,160 L50,150 L30,120 Z" fill="#FF6B6B" stroke="#E74C3C" stroke-width="3"/>`
-            },
-            BA: {
-                name: "Bahia",
-                color: "#F1C40F",
-                foods: ["Moqueca baiana", "Acarajé", "Vatapá", "Bobó de camarão"],
-                vocabulary: ["Oba!", "Eitaaa!", "Vish!", "Êba!"],
-                svg: `<path d="M60,40 L150,50 L170,80 L170,120 L150,150 L100,160 L50,150 L30,120 L30,80 L40,50 Z" fill="#F1C40F" stroke="#D4AC0D" stroke-width="3"/>`
-            },
-            CE: {
-                name: "Ceará",
-                color: "#E67E22",
-                foods: ["Carne de sol", "Baião de dois", "Cuscuz", "Sorvete de tapioca"],
-                vocabulary: ["Oxente!", "Eita!", "Vixe Maria!", "Nego!"],
-                svg: `<path d="M70,50 L140,50 L160,70 L160,100 L150,130 L120,150 L80,150 L50,130 L40,100 L40,70 Z" fill="#E67E22" stroke="#CA6F1E" stroke-width="3"/>`
-            },
-            DF: {
-                name: "Distrito Federal",
-                color: "#9B59B6",
-                foods: ["Pão de queijo", "Empadão goiano", "Goiabada", "Pequi"],
-                vocabulary: ["Vixe!", "Poxa!", "Eita!", "Uai!"],
-                svg: `<rect x="50" y="60" width="110" height="100" rx="10" fill="#9B59B6" stroke="#8E44AD" stroke-width="3"/>`
-            },
-            ES: {
-                name: "Espírito Santo",
-                color: "#1ABC9C",
-                foods: ["Moqueca capixaba", "Linguado frito", "Pudim de maracujá", "Churrasco"],
-                vocabulary: ["Uai!", "Poxa!", "Eita!", "Nossa!"],
-                svg: `<path d="M60,70 L120,60 L150,80 L150,120 L130,140 L90,150 L50,130 L40,100 L50,80 Z" fill="#1ABC9C" stroke="#16A085" stroke-width="3"/>`
-            },
-            GO: {
-                name: "Goiás",
-                color: "#27AE60",
-                foods: ["Empadão goiano", "Goiabada cascão", "Pão de queijo", "Arroz de pequi"],
-                vocabulary: ["Uai!", "Sô!", "Eita!", "Poxa!"],
-                svg: `<path d="M40,60 L140,50 L170,80 L170,130 L140,160 L80,170 L30,150 L20,110 L25,80 Z" fill="#27AE60" stroke="#1E8449" stroke-width="3"/>`
-            },
-            MA: {
-                name: "Maranhão",
-                color: "#3498DB",
-                foods: ["Arroz de cuxá", "Peixe escabeche", "Caranguejo", "Taieira"],
-                vocabulary: ["Eita!", "Vixe!", "Nego", "Oxente!"],
-                svg: `<path d="M50,50 L150,50 L170,80 L180,120 L160,150 L100,160 L40,150 L20,120 L25,80 Z" fill="#3498DB" stroke="#2980B9" stroke-width="3"/>`
-            },
-            MT: {
-                name: "Mato Grosso",
-                color: "#16A085",
-                foods: ["Pequi", "Arroz com pequi", "Frango caipira", "Pamonha"],
-                vocabulary: ["Uai!", "Eita!", "Sô!", "Vixe!"],
-                svg: `<path d="M30,50 L150,40 L180,70 L180,130 L150,170 L80,180 L20,160 L10,110 L15,70 Z" fill="#16A085" stroke="#0E6655" stroke-width="3"/>`
-            },
-            MS: {
-                name: "Mato Grosso do Sul",
-                color: "#2ECC71",
-                foods: ["Sopa paraguaia", "Chipa", "Frango com quiabo", "Doces"],
-                vocabulary: ["Uai!", "Eita!", "Poxa!", "Sô!"],
-                svg: `<path d="M50,40 L160,40 L180,70 L180,130 L160,160 L100,170 L40,160 L20,130 L25,80 Z" fill="#2ECC71" stroke="#27AE60" stroke-width="3"/>`
-            },
-            MG: {
-                name: "Minas Gerais",
-                color: "#8E44AD",
-                foods: ["Pão de queijo", "Feijão tropeiro", "Frango com quiabo", "Goiabada"],
-                vocabulary: ["Uai!", "Sô!", "Eita!", "Poxa vida!"],
-                svg: `<path d="M60,40 L150,50 L170,80 L170,130 L140,160 L80,170 L30,150 L20,110 L25,70 Z" fill="#8E44AD" stroke="#71368A" stroke-width="3"/>`
-            },
-            PA: {
-                name: "Pará",
-                color: "#D35400",
-                foods: ["Tacacá", "Açaí", "Maniçoba", "Filé de pirarucu"],
-                vocabulary: ["Vixe!", "Eita!", "Nego", "Ui!"],
-                svg: `<path d="M40,40 L160,40 L180,80 L180,140 L150,170 L80,180 L20,160 L10,110 L15,60 Z" fill="#D35400" stroke="#A04000" stroke-width="3"/>`
-            },
-            PB: {
-                name: "Paraíba",
-                color: "#C0392B",
-                foods: ["Baião de dois", "Caruru", "Mugunzá", "Cachorro-quente"],
-                vocabulary: ["Oxente!", "Vixe!", "Nego", "Eita!"],
-                svg: `<path d="M70,60 L150,60 L170,80 L170,110 L160,140 L120,150 L70,150 L40,130 L40,100 L50,70 Z" fill="#C0392B" stroke="#922B21" stroke-width="3"/>`
-            },
-            PR: {
-                name: "Paraná",
-                color: "#2980B9",
-                foods: ["Barreado", "Canjica", "Quentão", "Cuca"],
-                vocabulary: ["Eita!", "Vixe!", "Poxa!", "Nossa!"],
-                svg: `<path d="M50,50 L150,50 L170,80 L170,140 L140,170 L80,180 L20,160 L15,110 L25,70 Z" fill="#2980B9" stroke="#1F618D" stroke-width="3"/>`
-            },
-            PE: {
-                name: "Pernambuco",
-                color: "#E74C3C",
-                foods: ["Buchada", "Galinha à cabidela", "Mojito", "Cartola"],
-                vocabulary: ["Eita!", "Vixe!", "Oxente!", "Nego!"],
-                svg: `<path d="M60,50 L140,50 L160,70 L165,100 L160,130 L130,150 L80,155 L40,135 L35,100 L40,70 Z" fill="#E74C3C" stroke="#C0392B" stroke-width="3"/>`
-            },
-            PI: {
-                name: "Piauí",
-                color: "#F39C12",
-                foods: ["Pé de moleque", "Bolo de糙米", "Cuscuz", "Carne de sol"],
-                vocabulary: ["Vixe!", "Eita!", "Oxente!", "Nego!"],
-                svg: `<path d="M50,40 L150,45 L170,70 L175,110 L160,150 L100,165 L35,150 L20,110 L25,70 Z" fill="#F39C12" stroke="#D68910" stroke-width="3"/>`
-            },
-            RJ: {
-                name: "Rio de Janeiro",
-                color: "#9B59B6",
-                foods: ["Feijoada", "Churrasco", "Caipirinha", "Couve-flor"],
-                vocabulary: ["Eita!", "Vish!", "Nossa!", "Poxa!"],
-                svg: `<path d="M70,60 L130,55 L155,75 L155,110 L145,135 L110,150 L70,150 L40,130 L40,100 L50,75 Z" fill="#9B59B6" stroke="#8E44AD" stroke-width="3"/>`
-            },
-            RN: {
-                name: "Rio Grande do Norte",
-                color: "#E91E63",
-                foods: ["Baião de dois", "Carne de sol", "Rapadura", "Cuscuz"],
-                vocabulary: ["Oxente!", "Eita!", "Vixe!", "Nego!"],
-                svg: `<path d="M60,50 L150,50 L170,70 L175,100 L165,135 L120,155 L65,155 L30,130 L30,95 L40,65 Z" fill="#E91E63" stroke="#C2185B" stroke-width="3"/>`
-            },
-            RS: {
-                name: "Rio Grande do Sul",
-                color: "#1ABC9C",
-                foods: ["Churrasco", "Canjica", "Quentão", "Sopa de pentelho"],
-                vocabulary: ["Eita!", "Vixe!", "Poxa!", "Sô!"],
-                svg: `<path d="M40,50 L160,50 L180,80 L180,140 L150,170 L80,180 L20,160 L15,110 L25,70 Z" fill="#1ABC9C" stroke="#16A085" stroke-width="3"/>`
-            },
-            RO: {
-                name: "Rondônia",
-                color: "#2C3E50",
-                foods: ["Pequi", "Peixe na brasa", "Frango caipira", "Goiabada"],
-                vocabulary: ["Eita!", "Vixe!", "Uai!", "Maneiro!"],
-                svg: `<path d="M60,60 L140,55 L160,75 L160,115 L145,145 L95,155 L50,140 L40,110 L45,75 Z" fill="#2C3E50" stroke="#1A252F" stroke-width="3"/>`
-            },
-            RR: {
-                name: "Roraima",
-                color: "#00BCD4",
-                foods: ["Peixe assado", "Creme de tapioca", "Frango caipira", "Açaí"],
-                vocabulary: ["Eita!", "Vixe!", "Ui!", "Maneiro!"],
-                svg: `<polygon points="100,30 160,60 160,130 100,170 40,130 40,60" fill="#00BCD4" stroke="#0097A7" stroke-width="3"/>`
-            },
-            SC: {
-                name: "Santa Catarina",
-                color: "#3498DB",
-                foods: ["Cascadei", "Cuca", "Churrasco", "Salgados"],
-                vocabulary: ["Eita!", "Vixe!", "Poxa!", "Nossa!"],
-                svg: `<path d="M60,50 L150,55 L170,80 L170,130 L145,155 L95,165 L45,150 L30,120 L35,85 L50,60 Z" fill="#3498DB" stroke="#2980B9" stroke-width="3"/>`
-            },
-            SP: {
-                name: "São Paulo",
-                color: "#F1C40F",
-                foods: ["Feijoada", "Pão de queijo", "Brigadeiro", "Mortadela"],
-                vocabulary: ["Eita!", "Vish!", "Poxa!", "Nossa!"],
-                svg: `<path d="M55,50 L155,50 L175,80 L175,130 L145,160 L85,170 L30,150 L20,110 L30,70 Z" fill="#F1C40F" stroke="#D4AC0D" stroke-width="3"/>`
-            },
-            SE: {
-                name: "Sergipe",
-                color: "#E91E63",
-                foods: ["Sururu", "Caranguejo", "Moqueca", "Doces"],
-                vocabulary: ["Vixe!", "Eita!", "Nego", "Oxente!"],
-                svg: `<path d="M60,80 L150,80 L165,100 L165,125 L150,145 L100,150 L55,140 L45,120 L50,95 Z" fill="#E91E63" stroke="#C2185B" stroke-width="3"/>`
-            },
-            TO: {
-                name: "Tocantins",
-                color: "#27AE60",
-                foods: ["Pão de queijo", "Pequi", "Frango caipira", "Goiabada"],
-                vocabulary: ["Uai!", "Eita!", "Vixe!", "Sô!"],
-                svg: `<path d="M40,40 L160,45 L175,75 L180,125 L160,165 L90,175 L25,155 L15,110 L20,65 Z" fill="#27AE60" stroke="#1E8449" stroke-width="3"/>`
-            }
+            AC: { name: "Acre", color: "#8B4513", foods: ["Tacacá", "Pirarucu assado", "Farofa d'água", "Açaí"], vocabulary: ["Eita!", "Vôte!", "Rapadura", "Maneiro!"], svg: `<path d="M60,40 L140,40 L150,60 L160,80 L150,100 L140,120 L120,140 L100,160 L80,160 L60,140 L50,120 L50,100 L50,80 L50,60 Z" fill="#8B4513" stroke="#5D2E0C" stroke-width="3"/>` },
+            AL: { name: "Alagoas", color: "#E74C3C", foods: ["Sururu", "Macaxeira", "Buchada de bode", "Camarão regional"], vocabulary: ["Vixi!", "Oxente!", "Nego", "Eita, meu!"], svg: `<path d="M80,50 L140,50 L160,70 L160,90 L150,110 L130,130 L110,150 L90,150 L70,130 L60,110 L60,90 L60,70 Z" fill="#E74C3C" stroke="#C0392B" stroke-width="3"/>` },
+            AM: { name: "Amazonas", color: "#228B22", foods: ["Tucunaré", "Jaraqui frito", "Caldeirada de peixe", "Boi na brasa"], vocabulary: ["Eita!", "Rapaz!", "Maneiro", "Vixe Maria!"], svg: `<ellipse cx="105" cy="105" rx="70" ry="70" fill="#228B22" stroke="#1B6B1B" stroke-width="3"/>` },
+            AP: { name: "Amapá", color: "#FF6B6B", foods: ["Peixe açougue", "Tacacá", "Guariúba", "Açaí"], vocabulary: ["Vixe!", "Nego", "Eita!", "Ui!"], svg: `<path d="M50,80 L160,80 L170,120 L150,150 L100,160 L50,150 L30,120 Z" fill="#FF6B6B" stroke="#E74C3C" stroke-width="3"/>` },
+            BA: { name: "Bahia", color: "#F1C40F", foods: ["Moqueca baiana", "Acarajé", "Vatapá", "Bobó de camarão"], vocabulary: ["Oba!", "Eitaaa!", "Vish!", "Êba!"], svg: `<path d="M60,40 L150,50 L170,80 L170,120 L150,150 L100,160 L50,150 L30,120 L30,80 L40,50 Z" fill="#F1C40F" stroke="#D4AC0D" stroke-width="3"/>` },
+            CE: { name: "Ceará", color: "#E67E22", foods: ["Carne de sol", "Baião de dois", "Cuscuz", "Sorvete de tapioca"], vocabulary: ["Oxente!", "Eita!", "Vixe Maria!", "Nego!"], svg: `<path d="M70,50 L140,50 L160,70 L160,100 L150,130 L120,150 L80,150 L50,130 L40,100 L40,70 Z" fill="#E67E22" stroke="#CA6F1E" stroke-width="3"/>` },
+            DF: { name: "Distrito Federal", color: "#9B59B6", foods: ["Pão de queijo", "Empadão goiano", "Goiabada", "Pequi"], vocabulary: ["Vixe!", "Poxa!", "Eita!", "Uai!"], svg: `<rect x="50" y="60" width="110" height="100" rx="10" fill="#9B59B6" stroke="#8E44AD" stroke-width="3"/>` },
+            ES: { name: "Espírito Santo", color: "#1ABC9C", foods: ["Moqueca capixaba", "Linguado frito", "Pudim de maracujá", "Churrasco"], vocabulary: ["Uai!", "Poxa!", "Eita!", "Nossa!"], svg: `<path d="M60,70 L120,60 L150,80 L150,120 L130,140 L90,150 L50,130 L40,100 L50,80 Z" fill="#1ABC9C" stroke="#16A085" stroke-width="3"/>` },
+            GO: { name: "Goiás", color: "#27AE60", foods: ["Empadão goiano", "Goiabada cascão", "Pão de queijo", "Arroz de pequi"], vocabulary: ["Uai!", "Sô!", "Eita!", "Poxa!"], svg: `<path d="M40,60 L140,50 L170,80 L170,130 L140,160 L80,170 L30,150 L20,110 L25,80 Z" fill="#27AE60" stroke="#1E8449" stroke-width="3"/>` },
+            MA: { name: "Maranhão", color: "#3498DB", foods: ["Arroz de cuxá", "Peixe escabeche", "Caranguejo", "Taieira"], vocabulary: ["Eita!", "Vixe!", "Nego", "Oxente!"], svg: `<path d="M50,50 L150,50 L170,80 L180,120 L160,150 L100,160 L40,150 L20,120 L25,80 Z" fill="#3498DB" stroke="#2980B9" stroke-width="3"/>` },
+            MT: { name: "Mato Grosso", color: "#16A085", foods: ["Pequi", "Arroz com pequi", "Frango caipira", "Pamonha"], vocabulary: ["Uai!", "Eita!", "Sô!", "Vixe!"], svg: `<path d="M30,50 L150,40 L180,70 L180,130 L150,170 L80,180 L20,160 L10,110 L15,70 Z" fill="#16A085" stroke="#0E6655" stroke-width="3"/>` },
+            MS: { name: "Mato Grosso do Sul", color: "#2ECC71", foods: ["Sopa paraguaia", "Chipa", "Frango com quiabo", "Doces"], vocabulary: ["Uai!", "Eita!", "Poxa!", "Sô!"], svg: `<path d="M50,40 L160,40 L180,70 L180,130 L160,160 L100,170 L40,160 L20,130 L25,80 Z" fill="#2ECC71" stroke="#27AE60" stroke-width="3"/>` },
+            MG: { name: "Minas Gerais", color: "#8E44AD", foods: ["Pão de queijo", "Feijão tropeiro", "Frango com quiabo", "Goiabada"], vocabulary: ["Uai!", "Sô!", "Eita!", "Poxa vida!"], svg: `<path d="M60,40 L150,50 L170,80 L170,130 L140,160 L80,170 L30,150 L20,110 L25,70 Z" fill="#8E44AD" stroke="#71368A" stroke-width="3"/>` },
+            PA: { name: "Pará", color: "#D35400", foods: ["Tacacá", "Açaí", "Maniçoba", "Filé de pirarucu"], vocabulary: ["Vixe!", "Eita!", "Nego", "Ui!"], svg: `<path d="M40,40 L160,40 L180,80 L180,140 L150,170 L80,180 L20,160 L10,110 L15,60 Z" fill="#D35400" stroke="#A04000" stroke-width="3"/>` },
+            PB: { name: "Paraíba", color: "#C0392B", foods: ["Baião de dois", "Caruru", "Mugunzá", "Cachorro-quente"], vocabulary: ["Oxente!", "Vixe!", "Nego", "Eita!"], svg: `<path d="M70,60 L150,60 L170,80 L170,110 L160,140 L120,150 L70,150 L40,130 L40,100 L50,70 Z" fill="#C0392B" stroke="#922B21" stroke-width="3"/>` },
+            PR: { name: "Paraná", color: "#2980B9", foods: ["Barreado", "Canjica", "Quentão", "Cuca"], vocabulary: ["Eita!", "Vixe!", "Poxa!", "Nossa!"], svg: `<path d="M50,50 L150,50 L170,80 L170,140 L140,170 L80,180 L20,160 L15,110 L25,70 Z" fill="#2980B9" stroke="#1F618D" stroke-width="3"/>` },
+            PE: { name: "Pernambuco", color: "#E74C3C", foods: ["Buchada", "Galinha à cabidela", "Mojito", "Cartola"], vocabulary: ["Eita!", "Vixe!", "Oxente!", "Nego!"], svg: `<path d="M60,50 L140,50 L160,70 L165,100 L160,130 L130,150 L80,155 L40,135 L35,100 L40,70 Z" fill="#E74C3C" stroke="#C0392B" stroke-width="3"/>` },
+            PI: { name: "Piauí", color: "#F39C12", foods: ["Pé de moleque", "Bolo de arroz", "Cuscuz", "Carne de sol"], vocabulary: ["Vixe!", "Eita!", "Oxente!", "Nego!"], svg: `<path d="M50,40 L150,45 L170,70 L175,110 L160,150 L100,165 L35,150 L20,110 L25,70 Z" fill="#F39C12" stroke="#D68910" stroke-width="3"/>` },
+            RJ: { name: "Rio de Janeiro", color: "#9B59B6", foods: ["Feijoada", "Churrasco", "Caipirinha", "Couve-flor"], vocabulary: ["Eita!", "Vish!", "Nossa!", "Poxa!"], svg: `<path d="M70,60 L130,55 L155,75 L155,110 L145,135 L110,150 L70,150 L40,130 L40,100 L50,75 Z" fill="#9B59B6" stroke="#8E44AD" stroke-width="3"/>` },
+            RN: { name: "Rio Grande do Norte", color: "#E91E63", foods: ["Baião de dois", "Carne de sol", "Rapadura", "Cuscuz"], vocabulary: ["Oxente!", "Eita!", "Vixe!", "Nego!"], svg: `<path d="M60,50 L150,50 L170,70 L175,100 L165,135 L120,155 L65,155 L30,130 L30,95 L40,65 Z" fill="#E91E63" stroke="#C2185B" stroke-width="3"/>` },
+            RS: { name: "Rio Grande do Sul", color: "#1ABC9C", foods: ["Churrasco", "Canjica", "Quentão", "Sopa de pentelho"], vocabulary: ["Eita!", "Vixe!", "Poxa!", "Sô!"], svg: `<path d="M40,50 L160,50 L180,80 L180,140 L150,170 L80,180 L20,160 L15,110 L25,70 Z" fill="#1ABC9C" stroke="#16A085" stroke-width="3"/>` },
+            RO: { name: "Rondônia", color: "#2C3E50", foods: ["Pequi", "Peixe na brasa", "Frango caipira", "Goiabada"], vocabulary: ["Eita!", "Vixe!", "Uai!", "Maneiro!"], svg: `<path d="M60,60 L140,55 L160,75 L160,115 L145,145 L95,155 L50,140 L40,110 L45,75 Z" fill="#2C3E50" stroke="#1A252F" stroke-width="3"/>` },
+            RR: { name: "Roraima", color: "#00BCD4", foods: ["Peixe assado", "Creme de tapioca", "Frango caipira", "Açaí"], vocabulary: ["Eita!", "Vixe!", "Ui!", "Maneiro!"], svg: `<polygon points="100,30 160,60 160,130 100,170 40,130 40,60" fill="#00BCD4" stroke="#0097A7" stroke-width="3"/>` },
+            SC: { name: "Santa Catarina", color: "#3498DB", foods: ["Cascadei", "Cuca", "Churrasco", "Salgados"], vocabulary: ["Eita!", "Vixe!", "Poxa!", "Nossa!"], svg: `<path d="M60,50 L150,55 L170,80 L170,130 L145,155 L95,165 L45,150 L30,120 L35,85 L50,60 Z" fill="#3498DB" stroke="#2980B9" stroke-width="3"/>` },
+            SP: { name: "São Paulo", color: "#F1C40F", foods: ["Feijoada", "Pão de queijo", "Brigadeiro", "Mortadela"], vocabulary: ["Eita!", "Vish!", "Poxa!", "Nossa!"], svg: `<path d="M55,50 L155,50 L175,80 L175,130 L145,160 L85,170 L30,150 L20,110 L30,70 Z" fill="#F1C40F" stroke="#D4AC0D" stroke-width="3"/>` },
+            SE: { name: "Sergipe", color: "#E91E63", foods: ["Sururu", "Caranguejo", "Moqueca", "Doces"], vocabulary: ["Vixe!", "Eita!", "Nego", "Oxente!"], svg: `<path d="M60,80 L150,80 L165,100 L165,125 L150,145 L100,150 L55,140 L45,120 L50,95 Z" fill="#E91E63" stroke="#C2185B" stroke-width="3"/>` },
+            TO: { name: "Tocantins", color: "#27AE60", foods: ["Pão de queijo", "Pequi", "Frango caipira", "Goiabada"], vocabulary: ["Uai!", "Eita!", "Vixe!", "Sô!"], svg: `<path d="M40,40 L160,45 L175,75 L180,125 L160,165 L90,175 L25,155 L15,110 L20,65 Z" fill="#27AE60" stroke="#1E8449" stroke-width="3"/>` }
         };
 
-        // Game state
         let brasigotchi = null;
         let gameLoop = null;
 
-        // Initialize the game
         function init() {
             render();
         }
 
-        // Create a new Brasigotchi with random state
         function createBrasigotchi() {
             const ufs = Object.keys(statesData);
             const randomUF = ufs[Math.floor(Math.random() * ufs.length)];
@@ -587,18 +257,15 @@
                 birthTime: Date.now()
             };
 
-            // Start the game loop
             startGameLoop();
             render();
         }
 
-        // Start the game loop
         function startGameLoop() {
             if (gameLoop) clearInterval(gameLoop);
             
             gameLoop = setInterval(() => {
                 if (brasigotchi && brasigotchi.isAlive) {
-                    // Decrease stats over time
                     if (!brasigotchi.isSleeping) {
                         brasigotchi.hunger = Math.max(0, brasigotchi.hunger - 1);
                         brasigotchi.happiness = Math.max(0, brasigotchi.happiness - 0.5);
@@ -607,11 +274,9 @@
                         brasigotchi.energy = Math.min(100, brasigotchi.energy + 5);
                     }
 
-                    // Update age (every minute)
                     const elapsed = Date.now() - brasigotchi.birthTime;
-                    brasigotchi.age = Math.floor(elapsed / 60000); // Age in minutes
+                    brasigotchi.age = Math.floor(elapsed / 60000);
 
-                    // Check if brasigotchi died
                     if (brasigotchi.hunger === 0 || brasigotchi.happiness === 0 || brasigotchi.energy === 0) {
                         brasigotchi.isAlive = false;
                         clearInterval(gameLoop);
@@ -622,7 +287,6 @@
             }, 5000);
         }
 
-        // Feed the Brasigotchi
         function feed(food) {
             if (!brasigotchi || !brasigotchi.isAlive || brasigotchi.isSleeping) return;
 
@@ -641,10 +305,10 @@
             brasigotchi.hunger = Math.min(100, brasigotchi.hunger + 25);
             brasigotchi.energy = Math.max(0, brasigotchi.energy - 5);
 
+            hideFoodMenu();
             render(randomMessage + " " + randomVocab);
         }
 
-        // Play with the Brasigotchi
         function play() {
             if (!brasigotchi || !brasigotchi.isAlive || brasigotchi.isSleeping) return;
 
@@ -665,7 +329,6 @@
             render(randomMessage + " " + randomVocab);
         }
 
-        // Put the Brasigotchi to sleep
         function toggleSleep() {
             if (!brasigotchi || !brasigotchi.isAlive) return;
 
@@ -678,27 +341,58 @@
             render(message);
         }
 
-        // Show food menu
         function showFoodMenu() {
             if (!brasigotchi || !brasigotchi.isAlive || brasigotchi.isSleeping) return;
 
             const overlay = document.getElementById('overlay');
             const foodMenu = document.getElementById('foodMenu');
+            const foodItems = document.getElementById('foodItems');
+            
+            foodItems.innerHTML = '';
+            brasigotchi.foods.forEach(food => {
+                const btn = document.createElement('button');
+                btn.className = 'food-item';
+                btn.textContent = food;
+                btn.onclick = () => feed(food);
+                foodItems.appendChild(btn);
+            });
             
             overlay.classList.add('show');
             foodMenu.classList.add('show');
         }
 
-        // Hide food menu
         function hideFoodMenu() {
             const overlay = document.getElementById('overlay');
             const foodMenu = document.getElementById('foodMenu');
-            
             overlay.classList.remove('show');
             foodMenu.classList.remove('show');
         }
 
-        // Render the game
+        function getFace() {
+            if (!brasigotchi.isAlive) return "☠️";
+            if (brasigotchi.isSleeping) return "😴";
+            if (brasigotchi.hunger < 30) return "😫";
+            if (brasigotchi.happiness < 30) return "😢";
+            if (brasigotchi.hunger > 70 && brasigotchi.happiness > 70) return "😄";
+            return "😐";
+        }
+
+        function getMouth() {
+            if (!brasigotchi.isAlive) {
+                return '<line x1="80" y1="140" x2="130" y2="140" stroke="white" stroke-width="3" stroke-linecap="round"/>';
+            }
+            if (brasigotchi.isSleeping) {
+                return '<ellipse cx="105" cy="135" rx="10" ry="5" fill="white"/>';
+            }
+            if (brasigotchi.happiness > 70) {
+                return '<path d="M80,130 Q105,155 130,130" fill="white" stroke="white" stroke-width="2"/>';
+            }
+            if (brasigotchi.hunger < 30) {
+                return '<circle cx="105" cy="135" r="10" fill="white"/>';
+            }
+            return '<line x1="85" y1="135" x2="125" y2="135" stroke="white" stroke-width="3" stroke-linecap="round"/>';
+        }
+
         function render(message = "") {
             const container = document.getElementById('gameContainer');
 
@@ -707,11 +401,10 @@
                     <div class="brasigotchi-container no-brasigotchi">
                         <h2>Nenhum Brasigotchi ainda!</h2>
                         <p>Crie seu primeiro Brasigotchi brasileiro</p>
-                        <button class="btn btn-new" onclick="createBrasigotchi()">
-                            🎲 Criar Brasigotchi
-                        </button>
+                        <button id="createBtn" class="btn btn-new">🎲 Criar Brasigotchi</button>
                     </div>
                 `;
+                document.getElementById('createBtn').onclick = createBrasigotchi;
                 return;
             }
 
@@ -767,65 +460,29 @@
 
                     ${brasigotchi.isAlive ? `
                         <div class="controls">
-                            <button class="btn btn-feed" onclick="showFoodMenu()">
-                                🍖 Alimentar
-                            </button>
-                            <button class="btn btn-play" onclick="play()">
-                                🎮 Brincar
-                            </button>
-                            <button class="btn btn-sleep" onclick="toggleSleep()">
-                                ${brasigotchi.isSleeping ? '☀️ Acordar' : '😴 Dormir'}
-                            </button>
+                            <button id="feedBtn" class="btn btn-feed">🍖 Alimentar</button>
+                            <button id="playBtn" class="btn btn-play">🎮 Brincar</button>
+                            <button id="sleepBtn" class="btn btn-sleep">${brasigotchi.isSleeping ? '☀️ Acordar' : '😴 Dormir'}</button>
                         </div>
                     ` : `
                         <div class="controls">
-                            <button class="btn btn-new" onclick="createBrasigotchi()">
-                                🎲 Novo Brasigotchi
-                            </button>
+                            <button id="newBtn" class="btn btn-new">🎲 Novo Brasigotchi</button>
                         </div>
                     `}
                 </div>
-
-                <div class="overlay" id="overlay" onclick="hideFoodMenu()"></div>
-                <div class="food-menu" id="foodMenu">
-                    <h3>Escolha a comida 🍽️</h3>
-                    ${brasigotchi.foods.map(food => `
-                        <button class="food-item" onclick="feed('${food}'); hideFoodMenu();">
-                            ${food}
-                        </button>
-                    `).join('')}
-                </div>
             `;
+
+            if (brasigotchi.isAlive) {
+                document.getElementById('feedBtn').onclick = showFoodMenu;
+                document.getElementById('playBtn').onclick = play;
+                document.getElementById('sleepBtn').onclick = toggleSleep;
+            } else if (brasigotchi.isAlive === false) {
+                document.getElementById('newBtn').onclick = createBrasigotchi;
+            }
         }
 
-        // Get the appropriate face based on state
-        function getFace() {
-            if (!brasigotchi.isAlive) return "☠️";
-            if (brasigotchi.isSleeping) return "😴";
-            if (brasigotchi.hunger < 30) return "😫";
-            if (brasigotchi.happiness < 30) return "😢";
-            if (brasigotchi.hunger > 70 && brasigotchi.happiness > 70) return "😄";
-            return "😐";
-        }
+        document.getElementById('overlay').onclick = hideFoodMenu;
 
-        // Get mouth based on state
-        function getMouth() {
-            if (!brasigotchi.isAlive) {
-                return '<line x1="80" y1="140" x2="130" y2="140" stroke="white" stroke-width="3" stroke-linecap="round"/>';
-            }
-            if (brasigotchi.isSleeping) {
-                return '<ellipse cx="105" cy="135" rx="10" ry="5" fill="white"/>';
-            }
-            if (brasigotchi.happiness > 70) {
-                return '<path d="M80,130 Q105,155 130,130" fill="white" stroke="white" stroke-width="2"/>';
-            }
-            if (brasigotchi.hunger < 30) {
-                return '<circle cx="105" cy="135" r="10" fill="white"/>';
-            }
-            return '<line x1="85" y1="135" x2="125" y2="135" stroke="white" stroke-width="3" stroke-linecap="round"/>';
-        }
-
-        // Start the game
         init();
     </script>
 </body>
